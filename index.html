@@ -3,71 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jorge Avalles — Aplicaciones Android</title>
+<title>Jorge Agrisuelas Vallés — Product engineer</title>
+<meta name="description" content="Diseño y construyo producto de cero a producción. Automatización, IA y aplicaciones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
-    color: #1f2328;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    padding: 3rem 1.25rem;
+:root{
+  --bg:#F3F4F6; --surface:#FFFFFF; --ink:#0E1116; --ink-2:#3A414D;
+  --muted:#6B7280; --line:#DEE0E5; --accent:#3B31A8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0D0F13; --surface:#151920; --ink:#EEF0F4; --ink-2:#B7BDC8;
+    --muted:#858D9B; --line:#252A33; --accent:#9A90F5;
   }
-  main { max-width: 34rem; width: 100%; }
-  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
-  .sub { color: #59636e; margin: 0 0 2.5rem; }
-  h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #59636e; margin: 2.5rem 0 .75rem; }
-  ul { list-style: none; padding: 0; margin: 0; }
-  li {
-    border: 1px solid #d1d9e0;
-    border-radius: 10px;
-    padding: .9rem 1.1rem;
-    margin-bottom: .6rem;
-  }
-  .name { font-weight: 600; }
-  .pkg { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; color: #59636e; }
-  a { color: #0969da; }
-  footer { margin-top: 3rem; font-size: .85rem; color: #59636e; border-top: 1px solid #d1d9e0; padding-top: 1rem; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #0d1117; color: #e6edf3; }
-    .sub, h2, .pkg, footer { color: #9198a1; }
-    li, footer { border-color: #3d444d; }
-    a { color: #4493f8; }
-  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 26px}
+header{padding:76px 0 0}
+h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-wrap:balance;
+  font-size:clamp(38px,7vw,66px);line-height:.98;letter-spacing:-.035em;margin:0 0 18px}
+.role{font-size:clamp(18px,2.5vw,22px);line-height:1.38;color:var(--ink-2);max-width:36ch;margin:0 0 28px}
+.role b{color:var(--ink);font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:"JetBrains Mono",monospace;
+  font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  padding-bottom:44px;border-bottom:1px solid var(--line)}
+.meta a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+.meta a:hover{color:var(--accent);border-color:var(--accent)}
+.stat{display:grid;grid-template-columns:1fr;gap:14px;padding:44px 0;border-bottom:1px solid var(--line)}
+@media(min-width:760px){.stat{grid-template-columns:auto minmax(0,1fr);gap:0 38px;align-items:center}}
+.fig{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(60px,12vw,118px);
+  line-height:.82;letter-spacing:-.05em;color:var(--accent)}
+.stat p{margin:0;font-size:18px;line-height:1.45;color:var(--ink-2);max-width:44ch}
+.stat p b{color:var(--ink);font-weight:600}
+h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:58px 0 8px}
+.sub{color:var(--muted);font-size:15.5px;margin:0 0 28px;max-width:62ch}
+.proj{border-top:1px solid var(--line);padding:30px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:820px){.grid{grid-template-columns:180px minmax(0,1fr);gap:0 40px}}
+.side{font-family:"JetBrains Mono",monospace;font-size:11.5px;line-height:1.75;color:var(--muted)}
+.side b{display:block;color:var(--accent);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.side span{display:block}
+h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:24px;
+  letter-spacing:-.022em;margin:0 0 4px;line-height:1.12}
+.tag{font-size:15px;color:var(--muted);margin:0 0 14px}
+p{margin:0 0 12px;max-width:64ch}
+.res{border-left:2px solid var(--accent);padding-left:16px;margin-top:14px}
+.res p{margin:0;font-weight:500;color:var(--ink)}
+.mini{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:6px}
+@media(min-width:700px){.mini{grid-template-columns:1fr 1fr}}
+.mini>div{background:var(--surface);padding:20px 22px}
+.mini h4{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin:0 0 5px}
+.mini p{margin:0;font-size:14.5px;color:var(--ink-2)}
+.mini a{color:var(--accent)}
+ul.apps{list-style:none;padding:0;margin:6px 0 0;display:grid;grid-template-columns:1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+@media(min-width:700px){ul.apps{grid-template-columns:1fr 1fr}}
+ul.apps li{background:var(--surface);padding:15px 20px;font-size:15px}
+ul.apps a{color:var(--ink);text-decoration:none;font-weight:600}
+ul.apps a:hover{color:var(--accent)}
+ul.apps small{display:block;color:var(--muted);font-weight:400;font-size:13.5px;margin-top:2px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:24px 0 80px;
+  font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.05em;color:var(--muted)}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 </style>
 </head>
 <body>
-<main>
-  <h1>Jorge Avalles</h1>
-  <p class="sub">Desarrollador de aplicaciones Android.</p>
+<div class="wrap">
 
-  <h2>Aplicaciones</h2>
-  <ul>
-    <li>
-      <div class="name">NapStop</div>
-      <div class="pkg">com.jorgeva.napstop</div>
-    </li>
-    <li>
-      <div class="name">QuickNote</div>
-      <div class="pkg">com.jorgeva.quicknote</div>
-    </li>
-    <li>
-      <div class="name">Adivina la Palabra</div>
-      <div class="pkg">com.jorgeavalles.adivinalapalabra</div>
-    </li>
-  </ul>
+<header>
+  <h1>Jorge Agrisuelas Vallés</h1>
+  <p class="role">Diseño y construyo producto de cero a producción. <b>Siete años dentro de la
+  producción de audiolibros</b>, los dos últimos construyendo las herramientas internas que la
+  sostenían.</p>
+  <div class="meta">
+    <span>España — remoto</span>
+    <span><a href="mailto:jorgeva.dev@gmail.com">jorgeva.dev@gmail.com</a></span>
+    <span><a href="https://github.com/jorgeva-dev">GitHub</a></span>
+    <span><a href="https://play.google.com/store/apps/developer?id=Jorge+A.+Vall%C3%A9s">Google Play</a></span>
+    <span><a href="https://www.linkedin.com/in/jorgeavalles/">LinkedIn</a></span>
+  </div>
+</header>
 
-  <h2>Contacto</h2>
-  <p><a href="mailto:jorgeavalles@gmail.com">jorgeavalles@gmail.com</a></p>
+<div class="stat">
+  <div class="fig">2</div>
+  <p><b>jornadas completas liberadas.</b> Dos personas, ocho horas al día, cortando respiraciones
+  a mano en Cubase. Automaticé el proceso entero y pasaron a otras funciones.</p>
+</div>
 
-  <footer>
-    Sitio del desarrollador. Consulta el archivo
-    <a href="/app-ads.txt">app-ads.txt</a>.
-  </footer>
-</main>
+<h2>Trabajo</h2>
+<p class="sub">Seis aplicaciones de escritorio construidas para la empresa donde trabajaba, entre
+2024 y 2026. No son proyectos personales: resolvían cuellos de botella reales de su producción y
+las usaba el equipo a diario.</p>
+
+<div class="proj"><div class="grid">
+  <div class="side"><b>Integración · Automatización</b><span>2025 — en uso</span><span>Python · API REST</span><span>Google Drive · Sheets</span><span>OAuth 2.0 · FFmpeg</span></div>
+  <div>
+    <h3>Cleanvoice GUI</h3>
+    <p class="tag">Una cadena manual de ocho pasos convertida en una operación por lotes</p>
+    <p>Quitar las respiraciones de una narración ocupaba a <strong>dos personas ocho horas al
+    día</strong>: un script de silencios y, a partir de ahí, cortar a mano en Cubase mirando la
+    forma de onda. Existía un servicio en la nube que lo hacía con IA, pero usarlo era su propia
+    cadena manual — subir de cinco en cinco, descargar, renombrar, convertir de 44,1 a 48 kHz— y
+    después marcar lo editado en las hojas de producción buscando libro por libro.</p>
+    <p>Construí una aplicación con dos mitades: procesado por lotes contra la API con reintentos y
+    validación previa para no gastar crédito, devolviendo los archivos ya renombrados y convertidos;
+    y marcado automático de veinte ediciones de golpe en las hojas compartidas del equipo.</p>
+    <div class="res"><p>Dos personas que dedicaban la jornada completa a cortar respiraciones
+    pasaron a otras funciones.</p></div>
+  </div>
+</div></div>
+
+<div class="proj"><div class="grid">
+  <div class="side"><b>Ajuste fino de modelo</b><span>2026 — en uso</span><span>Python · PyTorch</span><span>Respiro-en ajustado</span><span>PySide6 · Metal</span></div>
+  <div>
+    <h3>Editable</h3>
+    <p class="tag">Supresión de respiraciones con un modelo propio, sin coste por archivo</p>
+    <p>La herramienta anterior ya había quitado el trabajo manual, pero se apoyaba en un servicio de
+    pago por uso: <strong>unos 200 € al mes</strong>, indefinidamente, por una tarea idéntica que se
+    repetía cada día.</p>
+    <p>Partí de <em>Respiro-en</em>, un modelo publicado de detección de respiraciones, y lo ajusté a
+    nuestras voces. De los diez o doce locutores habituales fallaba con dos o tres: preparé el
+    conjunto de entrenamiento con esos casos difíciles, marcando <strong>por código de tiempo dónde
+    entra y sale cada respiración</strong>, y ajusté solo lo justo comprobando que no se degradaba lo
+    que ya funcionaba bien.</p>
+    <div class="res"><p>Unos 200 € al mes de servicio externo reducidos a cero, sin perder calidad.</p></div>
+  </div>
+</div></div>
+
+<div class="proj"><div class="grid">
+  <div class="side"><b>Manipulación de documentos</b><span>2025 — en uso</span><span>Python · pypdf</span><span>PyMuPDF</span></div>
+  <div>
+    <h3>Fusionador de anotaciones PDF</h3>
+    <p class="tag">Consolida las correcciones de varios revisores en un solo documento</p>
+    <p>Varios correctores anotan a la vez la misma copia de un texto. Ni Acrobat ni Vista Previa
+    saben combinar anotaciones sobre las mismas páginas: solo encadenan páginas. La consolidación se
+    hacía leyendo los archivos en paralelo y copiando comentarios a mano.</p>
+    <p>La herramienta recorre la estructura interna de cada PDF y trasplanta las anotaciones a las
+    páginas equivalentes del documento base, deduplicando por tipo y posición para que dos revisores
+    que marcan lo mismo no generen dos capas superpuestas.</p>
+  </div>
+</div></div>
+
+<div class="proj"><div class="grid">
+  <div class="side"><b>Privacidad por diseño · NLP</b><span>2026 — no desplegado</span><span>spaCy · Pydantic</span><span>llama.cpp · Qwen 2.5</span></div>
+  <div>
+    <h3>LibroScope</h3>
+    <p class="tag">Desglose de una obra sin que el manuscrito salga de la máquina</p>
+    <p>Antes de entrar en cabina, el narrador necesita el desglose del libro: personajes, dónde
+    interviene cada uno, lugares, y cómo se pronuncia cada nombre según su origen. Investigarlo es
+    rápido con un asistente con internet. Pero <strong>el manuscrito no puede salir</strong>: los
+    derechos y un acuerdo de exclusividad lo impiden.</p>
+    <p>Un pipeline en dos etapas convierte esa restricción legal en arquitectura. La primera corre
+    íntegramente en local —ingesta de PDF/EPUB, limpieza, segmentación, entidades con spaCy y
+    resolución de variantes de nombre— y un modelo de lenguaje en la propia máquina redacta el
+    informe. Solo ese informe, sin una línea de texto con derechos, se consulta fuera.</p>
+    <div class="res"><p>Desarrollado y funcional. No llegó a desplegarse: la empresa entró en
+    concurso antes.</p></div>
+  </div>
+</div></div>
+
+<h2>Proyectos propios</h2>
+<p class="sub">Aplicaciones y herramientas que construyo por mi cuenta desde 2014.</p>
+
+<div class="mini">
+  <div>
+    <h4>Gemini Web Bridge</h4>
+    <p>Numera los elementos interactivos de una página y los envía a un modelo junto con la captura,
+    para que indique dónde hay que pulsar. Sin clave de API.
+    <a href="https://github.com/jorgeva-dev/gemini-web-bridge">Código</a></p>
+  </div>
+  <div>
+    <h4>YouTube → Gemini</h4>
+    <p>Extrae la transcripción de un vídeo y la procesa con plantillas configurables.
+    <a href="https://github.com/jorgeva-dev/YT-Gemini-Summarizer">Código</a></p>
+  </div>
+  <div>
+    <h4>appscout</h4>
+    <p>Rastreador de nichos en Google Play. Expande semillas, puntúa la competencia, detecta huecos
+    entre iOS y Android y analiza reseñas con un modelo local para no gastar en tokens. Dos de las
+    apps publicadas salieron de sus resultados.</p>
+  </div>
+  <div>
+    <h4>Banco de pruebas de OCR</h4>
+    <p>Cuando no podía juzgar a ojo qué algoritmo leía mejor las fechas de caducidad, construí una
+    segunda aplicación solo para medirlos y comparar.</p>
+  </div>
+</div>
+
+<h2>Publicadas en Google Play</h2>
+<ul class="apps">
+  <li><a href="https://play.google.com/store/apps/details?id=com.jorgeva.quicknote">QuickNote</a><small>Notas adhesivas y widget</small></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.jorgeva.napstop">NapStop</a><small>Alarma de parada por GPS</small></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.jorgeva.heartrategraph">Heart Rate Graph</a><small>Monitor de frecuencia cardiaca</small></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.jorgeva.paradasbusvalencia">Paradas y Alarma Bus Valencia</a><small>Llegadas en tiempo real</small></li>
+</ul>
+<p style="margin-top:14px"><a href="https://play.google.com/store/apps/developer?id=Jorge+A.+Vall%C3%A9s" style="color:var(--accent)">Todas mis aplicaciones en Google Play →</a></p>
+
+<h2>Cómo trabajo</h2>
+<p>Escribo el código con modelos y verifico por comportamiento, no leyendo línea a línea. Tengo
+montado un flujo por fases: un modelo especifica y revisa, otro aplica los cambios, y la revisión
+final vuelve al primero. Los casos de prueba los defino yo, porque son reglas del negocio, y nada se
+publica sin haberlo usado intentando romperlo.</p>
+<p>Vengo de siete años juzgando si una grabación estaba bien o mal, con criterios y a escala. Esa
+costumbre —no opinar sobre la calidad, medirla— es la que aplico a lo que construyo.</p>
+
+<footer>
+  <a href="mailto:jorgeva.dev@gmail.com">jorgeva.dev@gmail.com</a> ·
+  <a href="https://github.com/jorgeva-dev">GitHub</a> ·
+  <a href="https://play.google.com/store/apps/developer?id=Jorge+A.+Vall%C3%A9s">Google Play</a> ·
+  <a href="https://www.linkedin.com/in/jorgeavalles/">LinkedIn</a> ·
+  <a href="/app-ads.txt">app-ads.txt</a>
+</footer>
+
+</div>
 </body>
 </html>
-
