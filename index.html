@@ -59,6 +59,8 @@ p{margin:0 0 12px;max-width:64ch}
   border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:6px}
 @media(min-width:700px){.mini{grid-template-columns:1fr 1fr}}
 .mini>div{background:var(--surface);padding:20px 22px}
+.mini>div.feat{grid-column:1/-1}
+.badge{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:2px;font-weight:400}
 .mini h4{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin:0 0 5px}
 .mini p{margin:0;font-size:14.5px;color:var(--ink-2)}
 .mini a{color:var(--accent)}
@@ -175,10 +177,18 @@ las usaba el equipo a diario.</p>
 <p class="sub">Aplicaciones y herramientas que construyo por mi cuenta desde 2014.</p>
 
 <div class="mini">
+  <div class="feat">
+    <h4>SemanticBridge <span class="badge">prototipo</span></h4>
+    <p>Extensión de Chrome que convierte la página en una lista de elementos para que un modelo de
+    lenguaje planifique y ejecute acciones sobre ella. Se detiene a pedir permiso antes de cualquier
+    acción irreversible y se defiende de instrucciones maliciosas escondidas en la página. Construida
+    dirigiendo a dos agentes de IA —uno programa y otro revisa— a lo largo de diez rondas de revisión.
+    Mi parte: la especificación, las decisiones de producto y las pruebas en vivo.</p>
+  </div>
   <div>
     <h4>Gemini Web Bridge</h4>
     <p>Numera los elementos interactivos de una página y los envía a un modelo junto con la captura,
-    para que indique dónde hay que pulsar. Sin clave de API.
+    para que indique dónde hay que pulsar.
     <a href="https://github.com/jorgeva-dev/gemini-web-bridge">Código</a></p>
   </div>
   <div>
